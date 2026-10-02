@@ -1,0 +1,78 @@
+<odoo>
+    <record id="view_stock_request_form_inherit_button_generate_delivery" model="ir.ui.view">
+        <field name="name">stock.request.form.inherit.generate.delivery</field>
+        <field name="model">stock.request.order</field>
+        <field name="inherit_id" ref="stock_request.stock_request_order_form"/>
+        <field name="arch" type="xml">
+
+            <!-- 1) Hide the original header -->
+            <xpath expr="//header" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//sheet//field[@name='picking_policy']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//sheet//field[@name='warehouse_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//sheet//field[@name='company_id']" position="attributes">
+                <attribute name="attrs">{'invisible': [(1,'=',1)]}</attribute>
+            </xpath>
+
+            <!-- 2) Add your custom header before sheet -->
+            <xpath expr="//sheet" position="before">
+                <header>
+                    <button name="action_confirm"
+                            attrs="{'invisible': [('state', '!=', ('draft'))]}"
+                            string="Sent to Manager"
+                            type="object"
+                            class="oe_highlight"
+                            groups="stock_request.group_stock_request_user"/>
+
+                    <button name="action_confirm_manager"
+                            attrs="{'invisible': [('state', '!=', ('sent'))]}"
+                            string="Confirm"
+                            type="object"
+                            class="oe_highlight"
+                            groups="stock.group_stock_manager"/>
+
+                    <field name="state"
+                           widget="statusbar"/>
+
+                </header>
+            </xpath>
+
+            <xpath expr="//field[@name='expected_date']" position="before">
+                <field name="applicant"/>
+            </xpath>
+
+            <xpath expr="//field[@name='expected_date']" position="after">
+                <field name="num_of_order"/>
+            </xpath>
+
+            <xpath expr="//notebook/page[@name='items']//field[@name='name']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//notebook/page[@name='items']//field[@name='route_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+        </field>
+    </record>
+
+
+    <record id="view_stock_request_list_inherit" model="ir.ui.view">
+        <field name="name">stock.request.list.inherit</field>
+        <field name="model">stock.request.order</field>
+        <field name="inherit_id" ref="stock_request.stock_request_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="operation_type" string="Operation"/>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

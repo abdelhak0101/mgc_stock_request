@@ -1,0 +1,37 @@
+<odoo>
+<!--    <record id="view_stock_move_search_inherit_service_filter" model="ir.ui.view">-->
+<!--        <field name="name">stock.move.search.inherit.service.filter</field>-->
+<!--        <field name="model">stock.move.line</field>-->
+<!--        <field name="inherit_id" ref="stock.view_move_line_tree"/>-->
+<!--        <field name="arch" type="xml">-->
+
+<!--            &lt;!&ndash; Add filter inside the search view &ndash;&gt;-->
+<!--            <xpath expr="//search" position="inside">-->
+<!--                <filter name="service_filter"-->
+<!--                        string="Service"-->
+<!--                        domain="[('service', 'ilike', 'service')]"/>-->
+<!--            </xpath>-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <record id="view_stock_move_tree_inherit_view" model="ir.ui.view">
+        <field name="name">stock.move.tree.inherit.view</field>
+        <field name="model">stock.move</field>
+        <field name="inherit_id" ref="stock.view_move_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='product_uom_qty']" position="after">
+                <field name="m_service"/>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_stock_move_line_tree_inherit_view" model="ir.ui.view">
+        <field name="name">stock.move.line.tree.inherit.view</field>
+        <field name="model">stock.move.line</field>
+        <field name="inherit_id" ref="stock.view_move_line_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="l_service"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

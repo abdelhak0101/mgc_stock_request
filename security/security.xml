@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Product Template Rule -->
+    <record id="product_template_location_rule" model="ir.rule">
+        <field name="name">Products by User Location</field>
+        <field name="model_id" ref="product.model_product_template"/>
+        <field name="domain_force">
+            <![CDATA[
+                ['|',
+                    ('id', 'in', [p.product_tmpl_id.id for p in user.location_ids.mapped('quant_ids')]),
+                    ('id', '=', False)
+                ]
+            ]]>
+        </field>
+        <field name="groups" eval="[(4, ref('stock.group_stock_user'))]"/>
+        <field name="active" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="global" eval="False"/>
+    </record>
+
+    <!-- Product Variant Rule -->
+    <record id="product_product_location_rule" model="ir.rule">
+        <field name="name">Product Variants by User Location</field>
+        <field name="model_id" ref="product.model_product_product"/>
+        <field name="domain_force">
+            <![CDATA[
+                ['|',
+                    ('product_tmpl_id', 'in', [p.product_tmpl_id.id for p in user.location_ids.mapped('quant_ids')]),
+                    ('id', '=', False)
+                ]
+            ]]>
+        </field>
+        <field name="groups" eval="[(4, ref('stock.group_stock_user'))]"/>
+        <field name="active" eval="True"/>
+        <field name="perm_read" eval="True"/>
+        <field name="perm_write" eval="False"/>
+        <field name="perm_create" eval="False"/>
+        <field name="perm_unlink" eval="False"/>
+        <field name="global" eval="False"/>
+    </record>
+
+    <!-- Product Manager Full Access -->
+    <record id="product_manager_rule" model="ir.rule">
+        <field name="name">Product Template Manager All Access</field>
+        <field name="model_id" ref="product.model_product_template"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('stock.group_stock_manager')), (4, ref('base.group_system'))]"/>
+    </record>
+    <record id="product_product_manager_rule" model="ir.rule">
+        <field name="name">Product Manager All Access</field>
+        <field name="model_id" ref="product.model_product_product"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('stock.group_stock_manager')), (4, ref('base.group_system'))]"/>
+    </record>
+
+    <record id="module_category_inventory" model="ir.module.category">
+        <field name="name">Mgc Inventory</field>
+        <field name="sequence">5</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+stock_request_line_user,Stock Request Line User,model_stock_request_product_line,stock_request.group_stock_request_user,1,1,1,0
+stock_request_line_manager,Stock Request Line Manager,model_stock_request_product_line,stock_request.group_stock_request_manager,1,1,1,1

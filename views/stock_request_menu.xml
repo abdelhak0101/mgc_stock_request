@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Action that shows only 'outgoing' operations -->
+    <record id="action_delivery_orders" model="ir.actions.act_window">
+        <field name="name">Delivery Orders</field>
+        <field name="res_model">stock.picking</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="view_id" ref="stock.vpicktree"/>
+        <field name="domain">[('picking_type_id.code', '=', 'outgoing')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your Delivery order
+            </p>
+        </field>
+        <field name="groups_id" eval="[(4, ref('stock.group_stock_manager'))]"/>
+
+    </record>
+
+    <record id="action_stock_request_orders" model="ir.actions.act_window">
+        <field name="name">Stock Request Orders</field>
+        <field name="res_model">stock.request.order</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+        <field name="domain">[('picking_type_id.code', '=', 'stock_request_order')]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your request order
+            </p>
+        </field>
+    </record>
+
+
+    <menuitem id="stock_request.menu_stock_request" active="false"/>
+
+    <!-- Link the action to the menu -->
+    <menuitem id="menu_stock_request_main"
+              name="Delivery Orders"
+              parent="stock_request.menu_stock_request_operations"
+              action="action_delivery_orders"
+              groups="stock.group_stock_manager"
+              sequence="20"/>
+
+    <menuitem id="stock_request_picking_type.menu_stock_request_order"
+              name="Stock Requests"
+              parent="stock_request.menu_stock_request_operations"
+              action="action_stock_request_orders"
+              sequence="10"/>
+
+    <menuitem id="stock_request.menu_stock_request_products"
+              name="Products"
+              parent="stock_request.menu_stock_request_root"
+              sequence="20"/>
+
+    <menuitem id="stock_request.menu_stock_request_all_products"
+              name="All Products"
+              parent="stock_request.menu_stock_request_products"
+              action="product.product_template_action_all"
+              sequence="10"/>
+
+</odoo>
+

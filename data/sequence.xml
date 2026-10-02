@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="seq_my_request_order" model="ir.sequence">
+        <field name="name">My Request Order</field>
+        <field name="code">my.stock.request.order</field>
+        <field name="prefix"></field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="seq_my_picking_request_order" model="ir.sequence">
+        <field name="name">My Picking Request Order</field>
+        <field name="code">my.picking.stock.request.order</field>
+        <field name="prefix"></field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+</odoo>

@@ -1,0 +1,15 @@
+<odoo>
+    <record id="email_template_stock_request" model="mail.template">
+        <field name="name">Stock Request Validation</field>
+        <field name="model_id" ref="mgc_stock_request.model_stock_request"/>
+        <field name="subject">Stock Request #${object.name} - Validation Needed</field>
+        <field name="body_html">
+            <![CDATA[
+            <p>Hello,</p>
+            <p>User <strong>${user.name}</strong> has requested validation for stock request <strong>${object.name}</strong>.</p>
+            <p><a href="/web#id=${object.id}&model=stock.request&view_type=form">Click here to view the request</a></p>
+            ]]>
+        </field>
+    </record>
+
+</odoo>

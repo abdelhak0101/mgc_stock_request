@@ -1,0 +1,559 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mgc_stock_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-18 15:43+0000\n"
+"PO-Revision-Date: 2025-11-18 15:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mgc_stock_request
+#: model:mail.template,body_html:mgc_stock_request.email_template_stock_request
+msgid ""
+"\n"
+"            \n"
+"            <p>Hello,</p>\n"
+"            <p>User <strong>${user.name}</strong> has requested validation for stock request <strong>${object.name}</strong>.</p>\n"
+"            <p><a href=\"/web#id=${object.id}&model=stock.request&view_type=form\">Click here to view the request</a></p>\n"
+"            \n"
+"        "
+msgstr ""
+"\n"
+"            \n"
+"            <p>Bonjour,</p>\n"
+"            <p>L’utilisateur <strong>${user.name}</strong> a demandé la validation de la demande de stock <strong>${object.name}</strong>.</p>\n"
+"            <p><a href=\"/web#id=${object.id}&model=stock.request&view_type=form\">Cliquez ici pour voir la demande</a></p>\n"
+"            \n"
+"        "
+
+#. module: mgc_stock_request
+#: model:ir.ui.menu,name:mgc_stock_request.menu_stock_request_main
+msgid "All Delivery Orders"
+msgstr "Tous les bons de livraison"
+
+#. module: mgc_stock_request
+#: model:ir.ui.menu,name:stock_request_picking_type.menu_stock_request_order
+msgid "Stock Requests"
+msgstr "Demandes de stock"
+
+#. module: mgc_stock_request
+#: model:ir.ui.menu,name:stock_request.menu_stock_request_products
+msgid "Products"
+msgstr "Produits"
+
+#. module: mgc_stock_request
+#: model:ir.ui.menu,name:stock_request.menu_stock_request_all_products
+msgid "All Products"
+msgstr "Tout les Produits"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_res_users__location_ids
+msgid "Allowed Locations"
+msgstr "Emplacements autorisés"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields.selection,name:mgc_stock_request.selection__stock_request__states__approved
+msgid "Approved"
+msgstr "Approuvé"
+
+#. module: mgc_stock_request
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.view_stock_request_form_inherit_button_generate_delivery
+msgid "Confirm"
+msgstr "Confirmer"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields.selection,name:mgc_stock_request.selection__stock_request__states__confirmed
+msgid "Confirmed"
+msgstr "Confirmé"
+
+#. module: mgc_stock_request
+#: model_terms:ir.actions.act_window,help:mgc_stock_request.action_delivery_orders
+msgid "Create your Delivery order"
+msgstr "Créez votre bon de livraison"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,help:mgc_stock_request.field_res_users__delivery_source_location_id
+msgid "Default source location for Delivery Orders created by this user."
+msgstr "Emplacement source par défaut des bons de livraison créés par cet utilisateur."
+
+#. module: mgc_stock_request
+#: model:ir.actions.act_window,name:mgc_stock_request.action_delivery_orders
+msgid "Delivery Orders"
+msgstr "Bons de livraison"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_res_users__delivery_source_location_id
+msgid "Delivery Source Location"
+msgstr "Emplacement de la source de livraison"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_product_product__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_product_template__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_res_users__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_quant__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_tier_validation__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields.selection,name:mgc_stock_request.selection__stock_request__states__done
+msgid "Done"
+msgstr "Fait"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields.selection,name:mgc_stock_request.selection__stock_request__states__draft
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: mgc_stock_request
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.view_stock_request_form_inherit_button_generate_delivery
+msgid "Generate Delivery Order"
+msgstr "Générer un bon de livraison"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_product_product__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_product_template__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_res_users__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_picking__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_quant__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_tier_validation__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_product_product____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_product_template____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_res_users____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_quant____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_tier_validation____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: mgc_stock_request
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.view_users_form_location
+msgid "Locations"
+msgstr "Emplacements"
+
+#. module: mgc_stock_request
+#: model:ir.module.category,name:mgc_stock_request.module_category_inventory
+msgid "Mgc Inventory"
+msgstr "Inventaire Mgc"
+
+#. module: mgc_stock_request
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.view_product_template_form_inherit_hide_header
+msgid "My Stock"
+msgstr "Stock actual"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request__operation_type
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.view_stock_request_list_inherit
+msgid "Operation"
+msgstr "Opération"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request__picking_type_id
+msgid "Operation Type"
+msgstr "Type d’opération"
+
+#. module: mgc_stock_request
+#: model:ir.model,name:mgc_stock_request.model_product_product
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move__product_id
+msgid "Product"
+msgstr "Article"
+
+#. module: mgc_stock_request
+#: model:ir.model,name:mgc_stock_request.model_product_template
+msgid "Product Template (Multi-Company)"
+msgstr "Modèle de produit (multi-sociétés)"
+
+#. module: mgc_stock_request
+#: model:ir.model,name:mgc_stock_request.model_stock_quant
+msgid "Quants"
+msgstr "Quantités"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields.selection,name:mgc_stock_request.selection__stock_request__states__sent
+msgid "Sent"
+msgstr "Envoyé"
+
+#. module: mgc_stock_request
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.view_stock_request_form_inherit_button_generate_delivery
+msgid "Sent to Manager"
+msgstr "Envoyer au Magasinier"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move__service
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_picking__service
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.view_stock_move_search_inherit_service_filter
+msgid "Service"
+msgstr "Service"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request__states
+msgid "Status"
+msgstr "Statut"
+
+#. module: mgc_stock_request
+#: model:ir.model,name:mgc_stock_request.model_stock_move
+msgid "Stock Move"
+msgstr "Mouvement de stock"
+
+#. module: mgc_stock_request
+#: model:ir.model,name:mgc_stock_request.model_stock_request
+msgid "Stock Request"
+msgstr "Demande de stock"
+
+#. module: mgc_stock_request
+#: model:mail.template,subject:mgc_stock_request.email_template_stock_request
+msgid "Stock Request #${object.name} - Validation Needed"
+msgstr "Demande de Stock #${object.name} - Validation requise"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,help:mgc_stock_request.field_res_users__location_ids
+msgid "The user will only see products available in these stock locations."
+msgstr "L'utilisateur ne verra que les produits disponibles dans ces emplacements de stock"
+
+#. module: mgc_stock_request
+#: model:ir.model,name:mgc_stock_request.model_tier_validation
+msgid "Tier Validation (abstract)"
+msgstr "Validation par Niveau (abstrait)"
+
+#. module: mgc_stock_request
+#: model:ir.model,name:mgc_stock_request.model_stock_picking
+msgid "Transfer"
+msgstr "Transfert"
+
+#. module: mgc_stock_request
+#: model:ir.model,name:mgc_stock_request.model_res_users
+msgid "Users"
+msgstr "Utilisateurs"
+
+
+#. module: mgc_stock_request
+#: model:mail.template,body_html:mgc_stock_request.email_template_stock_request
+msgid ""
+"\n"
+"            \n"
+"            <p>Hello,</p>\n"
+"            <p>User <strong>${user.name}</strong> has requested validation for stock request <strong>${object.name}</strong>.</p>\n"
+"            <p><a href=\"/web#id=${object.id}&model=stock.request&view_type=form\">Click here to view the request</a></p>\n"
+"            \n"
+"        "
+msgstr "Cliquez ici pour voir la demande"
+
+
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_product_product__allowed_qty
+#: model:ir.model.fields,field_description:mgc_stock_request.field_product_template__allowed_qty
+msgid "Allowed Qty"
+msgstr "Quantité autorisée"
+
+
+#. module: mgc_stock_request
+#: model:ir.model.fields.selection,name:mgc_stock_request.selection__stock_request_order__state__confirmed
+msgid "Confirmed"
+msgstr "Confirmé"
+
+
+#. module: mgc_stock_request
+#: model_terms:ir.actions.act_window,help:mgc_stock_request.action_stock_request_orders
+msgid "Create your request order"
+msgstr "Créer une demande de commande"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_product_line__create_uid
+msgid "Created by"
+msgstr "Créée par"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_product_line__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,help:mgc_stock_request.field_res_users__delivery_source_location_id
+msgid "Default source location for Delivery Orders created by this user."
+msgstr ""
+"Emplacement source par défaut des bons de livraison créés par cet "
+"utilisateur."
+
+#. module: mgc_stock_request
+#: model:ir.actions.act_window,name:mgc_stock_request.action_delivery_orders
+#: model:ir.ui.menu,name:mgc_stock_request.menu_stock_request_main
+msgid "Delivery Orders"
+msgstr "Bons de livraison"
+
+
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_picking__location_dest_id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__location_dest_id
+msgid "Destination location"
+msgstr "Emplacement de destination"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_product_product__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_product_template__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_res_users__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_quant__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_product_line__display_name
+#: model:ir.model.fields,field_description:mgc_stock_request.field_tier_validation__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields.selection,name:mgc_stock_request.selection__stock_request_order__state__done
+msgid "Done"
+msgstr "Terminé"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields.selection,name:mgc_stock_request.selection__stock_request_order__state__draft
+msgid "Draft"
+msgstr "Brouillon"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_product_product__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_product_template__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_res_users__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move_line__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_picking__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_quant__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_product_line__id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_tier_validation__id
+msgid "ID"
+msgstr "ID"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_product_product____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_product_template____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_res_users____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move_line____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_picking____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_quant____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_product_line____last_update
+#: model:ir.model.fields,field_description:mgc_stock_request.field_tier_validation____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_product_line__write_uid
+msgid "Last Updated by"
+msgstr "Dernière modification par"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_product_line__write_date
+msgid "Last Updated on"
+msgstr "Dernière modification le"
+
+
+
+
+#. module: mgc_stock_request
+#: model:ir.model.fields.selection,name:mgc_stock_request.selection__stock_request_order__state__open
+msgid "Open"
+msgstr "Ouvert"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__operation_type
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.view_stock_request_list_inherit
+msgid "Operation"
+msgstr "Opération"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__picking_type_id
+msgid "Operation Type"
+msgstr "Type d’opération"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_picking__num_of_order
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__num_of_order
+msgid "Receipt Order Number"
+msgstr "Numéro de bon d'entrée"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__picking_type_code
+msgid "Picking Type Code"
+msgstr "Code type d’opération"
+
+#. module: mgc_stock_request
+#: code:addons/mgc_stock_request/models/delivery_stock_request.py:0
+#, python-format
+msgid "Please add at least one product with a quantity."
+msgstr "Veuillez ajouter au moins un produit avec une quantité."
+
+#. module: mgc_stock_request
+#: model:ir.model,name:mgc_stock_request.model_product_product
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move__product_id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__product_id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_product_line__product_id
+msgid "Product"
+msgstr "Article"
+
+#. module: mgc_stock_request
+#: model:ir.model,name:mgc_stock_request.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "Ligne d'opération détaillé (Stock Move Line)"
+
+
+
+
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_product_line__request_id
+msgid "Request"
+msgstr "Demande"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields.selection,name:mgc_stock_request.selection__stock_request_order__state__sent
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.view_stock_request_form_inherit_button_generate_delivery
+msgid "Sent to Manager"
+msgstr "Envoyer au Magasinier"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move__m_service
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move_line__l_service
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_picking__p_service
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__service
+msgid "Service"
+msgstr "Service"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__location_id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_product_line__location_id
+msgid "Source Location"
+msgstr "Emplacement source"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__state
+msgid "Status"
+msgstr "État"
+
+
+#. module: mgc_stock_request
+#: model:ir.model,name:mgc_stock_request.model_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_picking__request_id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__request_id
+msgid "Stock Request"
+msgstr "Demande de stock"
+
+
+
+#. module: mgc_stock_request
+#: model:ir.model,name:mgc_stock_request.model_stock_request_order
+msgid "Stock Request Order"
+msgstr "Ordre de demande de stock"
+
+#. module: mgc_stock_request
+#: model:ir.actions.act_window,name:mgc_stock_request.action_stock_request_orders
+msgid "Stock Request Orders"
+msgstr "Ordre de demande de stock"
+
+#. module: mgc_stock_request
+#: model:ir.model,name:mgc_stock_request.model_stock_request_product_line
+msgid "Stock Request Product Line"
+msgstr "Ligne de produit de la demande de stock"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__supp_name
+msgid "Supplier Name"
+msgstr "Nom du fournisseur"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__product_uom_id
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_product_line__product_uom_id
+msgid "Unit of Measure"
+msgstr "Unité de mesure"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__applicant
+msgid "Applicant"
+msgstr "Demandeur"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_picking__supp_name
+msgid "Supplier Name"
+msgstr "Nom de fournisseur"
+
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__num_of_order
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.view_stock_picking_form_inherit_button_validate
+msgid "Receipt Order Number"
+msgstr "Numéro de bon d'entrée"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__num_of_order
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.view_stock_picking_form_inherit_button_validate
+msgid "Delivery Order Number"
+msgstr "Numéro de bon de sortie"
+
+#. module: mgc_stock_request
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.mgc_stock_request_order_report
+msgid "<strong>Receipt Order Number:</strong>"
+msgstr "<strong>Numéro de bon d'entrée</strong>"
+
+#. module: mgc_stock_request
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.mgc_stock_request_order_report
+msgid "<strong>Receipt Order</strong>"
+msgstr "<strong>Bon de Réception</strong>"
+
+#. module: mgc_stock_request
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.mgc_stock_request_order_report
+msgid "<strong>Supplier Name</strong>"
+msgstr "<strong>Nom de fournisseur</strong>"
+
+#. module: mgc_stock_request
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.report_deliveryslip_inherit_order
+msgid "<strong>Delivery Order Number:</strong>"
+msgstr "<strong>Numéro de bon de sortie:</strong>"
+
+#. module: mgc_stock_request
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.report_deliveryslip_inherit_order
+msgid "<strong>Service</strong>"
+msgstr "Service"
+
+#. module: mgc_stock_request
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.report_deliveryslip_inherit_order
+msgid "Delivery Order"
+msgstr "Bons de Sortie"
+
+#. module: mgc_stock_request
+#: model_terms:ir.ui.view,arch_db:mgc_stock_request.view_stock_picking_form_inherit_button_validate
+msgid "Print"
+msgstr "Imprimer"
+
+#. module: mgc_stock_request
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move__m_service
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_move_line__l_service
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_picking__p_service
+#: model:ir.model.fields,field_description:mgc_stock_request.field_stock_request_order__service
+msgid "Service"
+msgstr "Service"

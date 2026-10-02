@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="mgc_stock_request_order_report" inherit_id="stock.report_picking">
+
+        <xpath expr="//div[@name='div_outgoing_address']" position="replace">
+            <div class="col-12 text-center">
+                <h1>
+                    <strong>Receipt Order</strong>
+                </h1>
+            </div>
+        </xpath>
+        <xpath expr="//div[@name='div_state']" position="replace">
+            <div class="col-auto">
+                <strong>Supplier Name</strong>
+                <p t-field="o.supp_name"/>
+            </div>
+        </xpath>
+
+        <xpath expr="//th[@name='th_to']" position="replace"/>
+        <xpath expr="//td[.//span[@t-field='ml.location_dest_id']]" position="replace"/>
+
+        <xpath expr="//div[@name='div_sched_date']" position="after">
+            <div class="col-auto">
+                <strong>Receipt Order Number:</strong>
+                <p t-field="o.num_of_order"/>
+            </div>
+        </xpath>
+    </template>
+
+
+    <template id="report_deliveryslip_inherit_order" inherit_id="stock.report_delivery_document">
+        <xpath expr="//div[@name='div_origin']" position="replace">
+            <div class="col-auto">
+                <strong>Service</strong>
+                <p t-field="o.p_service"/>
+            </div>
+        </xpath>
+        <xpath expr="//div[@name='div_sched_date']" position="before">
+            <div class="col-auto">
+                <strong>Delivery Order Number:</strong>
+                <p t-field="o.num_of_order"/>
+            </div>
+        </xpath>
+        <xpath expr="//t[@t-set='address']" position="replace">
+            <t t-set="address">
+            </t>
+        </xpath>
+        <xpath expr="//h2" position="before">
+            <div style="width: 100%; text-align: center; font-weight: bold; font-size: 20pt; margin-bottom: 20px;">
+                Delivery Order
+            </div>
+        </xpath>
+
+
+    </template>
+</odoo>

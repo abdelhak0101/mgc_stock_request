@@ -1,0 +1,14 @@
+<odoo>
+    <record id="view_users_form_location" model="ir.ui.view">
+        <field name="name">res.users.form.location</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <!-- Insert after 'company_ids' field -->
+            <xpath expr="//field[@name='company_id']" position="after">
+                <separator string="Locations"/>
+                <field name="location_ids" widget="many2many_tags" domain="[('usage','=','internal')]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
